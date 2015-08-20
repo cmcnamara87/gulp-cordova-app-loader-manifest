@@ -19,7 +19,7 @@ var calManifest = function calManifest(options) {
 
     var manifest = {
         files: {},
-        load: [],
+        load: options.load,
         root: options.root || './'
     };
 
@@ -43,13 +43,6 @@ var calManifest = function calManifest(options) {
             version: hasher.update(file.contents).digest('hex')
         };
 
-        var i, pattern;
-        for (i = 0; i < options.load.length; i++) {
-            pattern = options.load[i];
-            if (pattern.indexOf(filename) > -1) {
-                manifest.load.push(pattern.split(options.prefixSplit).pop())
-            }
-        }
         done();
     };
 
