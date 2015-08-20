@@ -1,6 +1,6 @@
 {
   "name": "gulp-cordova-app-loader-manifest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create manifest.json for cordova-app-loader",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,11 @@
     "cordova-app-loader",
     "gulp"
   ],
-  "author": "Anton Penev <antonpenev@gmail.com>",
+  "author": "Miguel Mendez <josemiguel.mendez@uoit.net>",
+  "contributors": [
+    {"name": "Anton Penev", "email": "antonpenev@gmail.com"},
+    {"name": "Alexander Beyn", "email": "malex@fatelectrongs.org"}
+  ],
   "license": "ISC",
   "devDependencies": {
     "code": "^1.2.1",
