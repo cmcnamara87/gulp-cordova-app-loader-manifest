@@ -2,8 +2,30 @@ gulp-cordova-app-loader-manifest
 ================================
 
 Gulp plugin to create cordova-app-loader manifests.
-This plugin is fork from [alexbeyn/gulp-cordova-app-loader-manifest](https://github.com/alexbeyn/gulp-cordova-app-loader-manifest), so all kudos go for him.
-There are minor changes in the manifest generation (mostly to fit the structure of my in my current projects easier).
+This plugin is fork from [antonpenev/gulp-cordova-app-loader-manifest](https://github.com/antonpenev/gulp-cordova-app-loader-manifest), so all kudos go to him.
+
+Added the `options.load` parameter to be directly copied to the final `manifest.json` and preserves order.
+
+This is important when loading in a specific order is important, for example [ionic framework](http://ionicframework.com/)
+
+##Installation
+
+There are 2 ways depending on your needs
+
+1. Clone the repo into your `node_modules` directory
+
+  `cd node_mobules`
+
+  `clone git@github.com:ObjectiveTruth/gulp-cordova-app-loader-manifest.git`
+
+  `cd gulp-cordova-app-loader-manifest`
+
+  `npm install`
+
+2. Mark it as a dependancy to your `package.json` via `npm`
+
+  `npm install --save https://github.com/ObjectiveTruth/gulp-cordova-app-loader-manifest.git`
+
 
 ## Usage
 
@@ -20,6 +42,9 @@ gulp.task('manifest', function() {
 ## Options
 
 #### load
+
+The values passed will be passed literaly to the final `manifest.json` preserving file ordering when cordova-app-loader loads them to the DOM
+
 ```javascript
 options.load = [
   'lib/your-app.js',
