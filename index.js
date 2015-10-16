@@ -21,7 +21,7 @@ var calManifest = function calManifest(options) {
 
     var manifest = {
         files: {},
-        load: _.cloneDeep(options.load),
+        load: _.clone(options.load),
         root: options.root || './'
     };
 
