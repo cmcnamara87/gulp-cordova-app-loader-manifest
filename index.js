@@ -4,7 +4,6 @@ var Stream = require('stream');
 var gutil = require('gulp-util');
 var _ = require('lodash');
 
-
 var PLUGIN_NAME = 'gulp-cordova-app-loader-manifest';
 
 
