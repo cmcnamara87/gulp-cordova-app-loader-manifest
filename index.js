@@ -2,6 +2,8 @@
 
 var Stream = require('stream');
 var gutil = require('gulp-util');
+var _ = require('lodash');
+
 
 var PLUGIN_NAME = 'gulp-cordova-app-loader-manifest';
 
@@ -19,7 +21,7 @@ var calManifest = function calManifest(options) {
 
     var manifest = {
         files: {},
-        load: options.load,
+        load: _.cloneDeep(options.load),
         root: options.root || './'
     };
 
